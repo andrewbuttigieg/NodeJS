@@ -1,0 +1,13 @@
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect("http://localhost:3000");
+
+  setTimeout(function(){ 
+	socket.on('click', function(){
+		console.log('you said I clicked');
+	});
+	socket.emit('click') }, 3000);
+
+  
+
+</script>
