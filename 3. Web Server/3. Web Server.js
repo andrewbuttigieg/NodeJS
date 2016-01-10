@@ -2,6 +2,7 @@ var app = require('express')();
 var http = require('http').Server(app);
 
 app.get('/', function(req, res){
+  res.writeHead(200, {'Content-Type': 'text/plain'});
   res.write('<a href="/about">About</a><br/>');
   res.write('<a href="/blog">Blog</a><br/>');
   res.end();
